@@ -1,1 +1,14 @@
-# vigenere-cipher
+# Vigenère Cipher Tool
+
+A simple, interactive Python tool for encrypting and decrypting messages using the Vigenère cipher.
+
+## Features
+- Encrypt and decrypt text interactively
+- Multiple operations in one session
+- User-friendly, colored interface
+- Error handling
+
+## Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/chouaibberziz/vigenere-cipher
