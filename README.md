@@ -16,3 +16,6 @@ A simple, interactive Python tool for encrypting and decrypting messages using t
    ```bash
     cd vigenere-cipher
    python3 vigenere.py
+3. install requirements.txt
+   ```bash
+   pip install -r requirements.txt 
