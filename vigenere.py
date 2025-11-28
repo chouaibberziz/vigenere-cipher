@@ -10,10 +10,14 @@ def vigenere_encrypt(plaintext, key):
     if key_length == 0:
         print(Fore.RED + "[!] Error: Key cannot be empty.")
         return None
-    for i, char in enumerate(plaintext.upper()):
-        if char.isalpha():
+    for i, char in enumerate(plaintext):
+        if char.isupper():
             shift = ord(key[i % key_length].upper()) - ord('A')
             encrypted_char = chr(((ord(char) - ord('A') + shift) % 26) + ord('A'))
+            encrypted.append(encrypted_char)
+        elif char.islower():
+            shift = ord(key[i % key_length].lower()) - ord('a')
+            encrypted_char = chr(((ord(char) - ord('a') + shift) % 26) + ord('a'))
             encrypted.append(encrypted_char)
         else:
             encrypted.append(char)
@@ -25,14 +29,19 @@ def vigenere_decrypt(ciphertext, key):
     if key_length == 0:
         print(Fore.RED + "[!] Error: Key cannot be empty.")
         return None
-    for i, char in enumerate(ciphertext.upper()):
-        if char.isalpha():
+    for i, char in enumerate(ciphertext):
+        if char.isupper():
             shift = ord(key[i % key_length].upper()) - ord('A')
             decrypted_char = chr(((ord(char) - ord('A') - shift) % 26) + ord('A'))
+            decrypted.append(decrypted_char)
+        elif char.islower():
+            shift = ord(key[i % key_length].lower()) - ord('a')
+            decrypted_char = chr(((ord(char) - ord('a') - shift) % 26) + ord('a'))
             decrypted.append(decrypted_char)
         else:
             decrypted.append(char)
     return ''.join(decrypted)
+
 
 def print_banner():
     banner = r"""
