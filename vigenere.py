@@ -52,9 +52,8 @@ def print_banner():
    ╚═══╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚══════╝
 
  ===============================================================
-            VIGENERE - Automated Wazuh Installation
-                      & Configuration Tool
-                   Created by Chouaïb Berziz
+        
+             Vigenère Cipher Tool - by CHOUAIB
  ===============================================================
     """
     print(Fore.RED + banner)
